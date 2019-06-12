@@ -10,9 +10,10 @@ const TestComponent = (props) => {
   return (
     <>
       <h1>{ props.counter }</h1>
+      <h2>{ props.magicProp }</h2>
       <button>Do Something!</button>
     </>
   );
 }
 
-export default withMagicProps(TestComponent);
+export default TestComponent;

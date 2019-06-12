@@ -2,11 +2,12 @@ import React from 'react';
 
 // Code Starts Here
 export function withMagicProps(Component) {
-    return function(props) {
+    return function Wrapper(props) {
         return (
             <Component 
                 someProp="Magical!"
                 magicProp="Wizardry!"
+                {...props}
             />
         )
     }

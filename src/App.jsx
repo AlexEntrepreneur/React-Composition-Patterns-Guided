@@ -3,6 +3,11 @@ import TestComponent from './components/TestComponent';
 // import LoginPage from './components/LoginPage';
 // import ContentPage from './components/ContentPage';
 import './script';
+import { withMagicProps } from './HOCs/HOCs';
+
+// Another way of using a HOC
+// We then invoke `EnhancedComponent` in the JSX below 
+const EnhancedComponent = withMagicProps(TestComponent);
 
 class App extends Component {
   constructor() {
@@ -16,7 +21,7 @@ class App extends Component {
   render() {
     return (
       <>
-        <TestComponent name="Test Prop" />
+        <TestComponent name="Test Prop" data={this.state.datas} />
       </>
     );
     // return (
