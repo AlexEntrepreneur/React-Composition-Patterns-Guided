@@ -36,4 +36,24 @@ console.log(add20(400));
 // This is simiar to Higher Order Components in React!
 // Functions here = Components
 // Objects here = JSX Elements
+function enhancer(component) {
+    return function() {
+       const boring = component(); 
+       boring.name = 'Enhanced!';
+       boring.newProp = 'Nice!';
+       boring.injectedProp = 'It Works!';
+       return boring;
+    };
+}
 
+function boringComponent() {
+    return {
+        name: 'Boring',
+        age: 58
+    };
+}
+
+const enhancedComponent = enhancer(boringComponent);
+
+console.log(boringComponent());
+console.log(enhancedComponent());
