@@ -16,4 +16,4 @@ const TestComponent = (props) => {
   );
 }
 
-export default TestComponent;
+export default withTimeStamp(TestComponent);
