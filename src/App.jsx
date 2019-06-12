@@ -31,9 +31,15 @@ class App extends Component {
     // );
     return (
       <div className="App">
-        <h1>App is Authenticated: { this.props.isAuthed }</h1>
+        <h1>App is Authenticated: { this.props.isAuthed.toString() }</h1>
+        {
+          this.props.isAuthed === false &&
           <LoginPage />
+        }
+        {
+          this.props.isAuthed === true &&
           <ContentPage />
+        }        
       </div>
     );
   }
