@@ -5,7 +5,7 @@ const LoginPage = (props) => {
     <div className="page content">
       <div className="placeholder-img">Content</div>
       <div className="placeholder-img">Content</div>
-      <button>Log Out</button>
+      <button onClick={props.logout}>Log Out</button>
     </div>
   );
 }

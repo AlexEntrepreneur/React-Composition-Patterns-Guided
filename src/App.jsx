@@ -38,7 +38,7 @@ class App extends Component {
         }
         {
           this.props.isAuthed === true &&
-          <ContentPage />
+          <ContentPage logout={this.props.logout} />
         }        
       </div>
     );

@@ -20,11 +20,17 @@ export default function withAuthentication(Component) {
             this.setState({ isAuthed: true });
         }
 
+        logout = () => {
+            localStorage.removeItem('is_authed');
+            this.setState({ isAuthed: false });
+        }
+
         render() {
             return(
                 <Component 
                     isAuthed={this.state.isAuthed}
                     login={this.login}
+                    logout={this.logout}
                 />
             );
         }
