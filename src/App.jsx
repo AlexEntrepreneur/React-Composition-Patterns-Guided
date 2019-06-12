@@ -34,7 +34,7 @@ class App extends Component {
         <h1>App is Authenticated: { this.props.isAuthed.toString() }</h1>
         {
           this.props.isAuthed === false &&
-          <LoginPage />
+          <LoginPage login={this.props.login} />
         }
         {
           this.props.isAuthed === true &&

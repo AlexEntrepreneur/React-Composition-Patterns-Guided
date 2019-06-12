@@ -15,10 +15,16 @@ export default function withAuthentication(Component) {
             }
         }
 
+        login = () => {
+            localStorage.setItem('is_authed', true);
+            this.setState({ isAuthed: true });
+        }
+
         render() {
             return(
                 <Component 
                     isAuthed={this.state.isAuthed}
+                    login={this.login}
                 />
             );
         }
