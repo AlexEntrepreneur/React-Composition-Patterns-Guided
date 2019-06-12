@@ -1,10 +1,10 @@
 import React from 'react';
-// import { 
-//   withMagicProps,
-//   withTimeStamp,
-//   withEnhancedFunctionality,
-//   randomNumberGenerator
-// } from '../HOCs/HOCs';
+import { 
+  withMagicProps,
+  withTimeStamp,
+  withEnhancedFunctionality,
+  randomNumberGenerator
+} from '../HOCs/HOCs';
 
 const TestComponent = (props) => {
   return (
@@ -15,4 +15,4 @@ const TestComponent = (props) => {
   );
 }
 
-export default TestComponent;
+export default withMagicProps(TestComponent);

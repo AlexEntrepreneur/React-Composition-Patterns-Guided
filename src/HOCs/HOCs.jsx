@@ -1,4 +1,16 @@
+import React from 'react';
+
 // Code Starts Here
+export function withMagicProps(Component) {
+    return function(props) {
+        return (
+            <Component 
+                someProp="Magical!"
+                magicProp="Wizardry!"
+            />
+        )
+    }
+}
 
 //====== Exercise A ======//
 // Build a HOC called `withTimeStamp` that injects 
