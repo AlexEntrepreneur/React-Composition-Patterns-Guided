@@ -11,7 +11,7 @@ const TestComponent = (props) => {
     <>
       <h1>{ props.counter }</h1>
       <h2>{ props.magicProp }</h2>
-      <button>Do Something!</button>
+      <button onClick={props.increaseCounter}>Do Something!</button>
     </>
   );
 }

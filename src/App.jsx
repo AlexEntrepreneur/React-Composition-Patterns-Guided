@@ -21,7 +21,11 @@ class App extends Component {
   render() {
     return (
       <>
-        <TestComponent name="Test Prop" data={this.state.datas} />
+        <TestComponent originalProp="Test Prop" data={this.state.datas} />
+        <TestComponent originalProp="Test Prop" data={this.state.datas} />
+        <TestComponent originalProp="Test Prop" data={this.state.datas} />
+        <TestComponent originalProp="Test Prop" data={this.state.datas} />
+        <TestComponent originalProp="Test Prop" data={this.state.datas} />
       </>
     );
     // return (
