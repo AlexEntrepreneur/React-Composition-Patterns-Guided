@@ -27,10 +27,40 @@ export function withMagicProps(Component) {
 
 // Petar's Example
 export function withTimeStamp(Component) {
-    return function anotherWrapper(props) {
+    return function AnotherWrapper(props) {
         return <Component date="12.06.2019" {...props} />
     }
-} 
+}
+
+// Enhanced Functionality
+export function withEnhancedFunctionality(Component) {
+    return class Enhanced extends React.Component {
+        constructor() {
+            super();
+            this.state = {
+                counter: 0
+            }
+        }
+
+        increaseCounter = () => {
+            this.setState((prevState) => {
+                return {
+                    counter: prevState.counter + 1
+                }
+            });
+        }
+
+        render() {
+            return (
+                <Component
+                    increaseCounter={this.increaseCounter}
+                    {...this.props}
+                    {...this.state}
+                />
+            )
+        }
+    }
+}
 
 //====== Exercise B ======//
 // Build a HOC called `randomNumberGenerator` that
