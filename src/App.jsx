@@ -1,11 +1,7 @@
 import React, { Component } from 'react';
-import Authentication from './HOCs/Authentication';
 import TestComponent from './components/TestComponent';
-import {
-  withEnhancedFunctionality,
-} from './HOCs/HOCs';
-import LoginPage from './components/LoginPage';
-import ContentPage from './components/ContentPage';
+// import LoginPage from './components/LoginPage';
+// import ContentPage from './components/ContentPage';
 import './script';
 
 class App extends Component {
@@ -18,30 +14,19 @@ class App extends Component {
   }
 
   render() {
-    const props = this.props;
     return (
-      <div className="App">
-        <h1>App is Authenticated: { props.isAuthed.toString() }</h1>
-        {
-          props.isAuthed === false &&
-          <LoginPage 
-            login={props.login}
-          />
-        }
-        {
-          props.isAuthed === true &&
-          <ContentPage 
-            logout={props.logout}
-          />
-        }
-      </div>
+      <>
+        <TestComponent name="Test Prop" />
+      </>
     );
     // return (
-    //   <>
-    //     <TestComponent name="Test Prop" />
-    //   </>
+    //   <div className="App">
+    //     <h1>App is Authenticated: {  }</h1>
+    //       <LoginPage />
+    //       <ContentPage />
+    //   </div>
     // );
   }
 }
 
-export default Authentication(App);
+export default App;
